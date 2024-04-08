@@ -26,3 +26,5 @@ class TaskAPITest(APITestCase):
 
     def tearDown(self):
         self.client.force_authenticate(user=None)
+
+    

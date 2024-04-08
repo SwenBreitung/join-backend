@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 
 
 class Task(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='tasks')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='tasks', null=True, blank=True)
     category = models.CharField(max_length=100)
     title = models.CharField(max_length=100)
     description = models.TextField(max_length=100)

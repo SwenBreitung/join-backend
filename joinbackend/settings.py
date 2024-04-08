@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'todo',
     'rest_framework',
     'tasks', 
+    'contacts', 
     'accounts',
+    'corsheaders',
     'rest_framework.authtoken',
 ]
 
@@ -61,6 +63,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+   
 ]
 
 ROOT_URLCONF = 'joinbackend.urls'
@@ -113,7 +118,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:5501",
+]
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
