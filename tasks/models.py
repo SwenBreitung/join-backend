@@ -24,7 +24,7 @@ class Task(models.Model):
 class Subtask(models.Model):
     task = models.ForeignKey(Task, related_name='subtasks', on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
-    status = models.CharField(max_length=100)
+    status = models.BooleanField(default=False)
     
 
 

@@ -6,7 +6,7 @@ from django.db import transaction
 class SubtaskSerializer(serializers.ModelSerializer):
     class Meta:
         model = Subtask
-        fields = [ 'name', 'status']
+        fields = ['id', 'name', 'status']
 
 class ContactSerializer(serializers.ModelSerializer):
     class Meta:
