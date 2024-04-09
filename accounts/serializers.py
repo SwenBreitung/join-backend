@@ -9,7 +9,7 @@ from rest_framework.authtoken.models import Token
 
 
 class LoginSerializer(serializers.Serializer):
-    email = serializers.EmailField()
+    username = serializers.CharField()  
     password = serializers.CharField()
 
 class UserRegistrationSerializer(serializers.ModelSerializer):
